@@ -1,0 +1,5 @@
+// 动态修改输入框的宽度
+val textFieldCursorKt = Class.forName("androidx.compose.foundation.text.TextFieldCursorKt")
+val cursorWidth = textFieldCursorKt.getDeclaredField("DefaultCursorThickness")
+cursorWidth.isAccessible = true
+cursorWidth.set(null, 1.dp.value)
